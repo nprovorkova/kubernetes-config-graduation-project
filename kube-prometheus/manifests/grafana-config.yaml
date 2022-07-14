@@ -8,6 +8,9 @@ metadata:
     app.kubernetes.io/version: 9.0.2
   name: grafana-config
   namespace: monitoring
+sections:
+  auth.anonymous:
+    enabled: true
 stringData:
   grafana.ini: |
     [date_formats]

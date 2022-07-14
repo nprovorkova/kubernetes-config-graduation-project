@@ -14,6 +14,13 @@ local kp =
         namespace: 'monitoring',
       },
     },
+    grafana+:: {
+      config+: {
+        sections: {
+          "auth.anonymous": {enabled: true},
+        },
+      },
+    },
   };
 
 { 'setup/0namespace-namespace': kp.kubePrometheus.namespace } +

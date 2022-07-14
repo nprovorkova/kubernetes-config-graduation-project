@@ -1843,7 +1843,7 @@ spec:
                 - ip
                 x-kubernetes-list-type: map
               ignoreNamespaceSelectors:
-                description: IgnoreNamespaceSelectors if set to true will ignore NamespaceSelector settings from all PodMonitor, ServiceMonitor and Probe objects. They will only discover endpoints within their current namespace. Defaults to false.
+                description: IgnoreNamespaceSelectors if set to true will ignore NamespaceSelector settings from all PodMonitor, ServiceMonitor and Probe objects. They will only discover endpoints within the namespace of the PodMonitor, ServiceMonitor and Probe objects. Defaults to false.
                 type: boolean
               image:
                 description: Image if specified has precedence over baseImage, tag and sha combinations. Specifying the version is still necessary to ensure the Prometheus Operator knows what version of Prometheus is being configured.
