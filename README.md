@@ -12,6 +12,7 @@
 
 #### Команды:
 mkdir kube-prometheus; cd my-kube-prometheus
+<br>export PATH=$PATH:$(go env GOPATH)/bin
 <br>jb init
 <br>jb install github.com/prometheus-operator/kube-prometheus/jsonnet/kube-prometheus@main
 <br>wget https://raw.githubusercontent.com/prometheus-operator/kube-prometheus/main/example.jsonnet -O example.jsonnet
