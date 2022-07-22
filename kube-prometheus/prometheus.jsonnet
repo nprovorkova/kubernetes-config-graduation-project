@@ -9,11 +9,26 @@ local kp =
       },
       grafana+:: {
         config+: {
-          sections: {
-            "auth.anonymous": {enabled: true},
-          },
+          sections+: {
+             # grafana access URL
+             server+: {
+               root_url: 'https://158.160.2.92/',
+             },
+             # default dashboard
+             dashboards+: {
+               default_home_dashboard_path: '/grafana-dashboard-definitions/0/nodes/nodes.json',
+             },
+             # predefined credentials
+             security+: {
+               admin_user: 'netology',
+               admin_password: '***'
+             },
+           },
         },
       },
+    },
+    grafana+: {
+        networkPolicy:: {},
     },
   };
 

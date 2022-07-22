@@ -22,3 +22,4 @@ mkdir kube-prometheus; cd my-kube-prometheus
 <br>kubectl apply --server-side -f manifests/setup
 <br>kubectl apply -f manifests/
 <br>kubectl get pods -n monitoring
+<br>Интерфейс grafana открывается по адресу балансировщика 158.160.2.92

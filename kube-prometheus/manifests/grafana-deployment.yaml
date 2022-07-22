@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/grafana-config: 870aa349e77af337b5fc1a7c763f590a
+        checksum/grafana-config: 76b07af10be57c4f7da414761ff3a633
         checksum/grafana-dashboardproviders: 3fb73b28e1666cd3558f36fa96b716e3
         checksum/grafana-datasources: fd4e3e7efd5990e7db368e3ade82c99a
       labels:
