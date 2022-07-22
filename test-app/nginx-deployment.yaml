@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app
+  namespace: applications
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+      - image: cr.yandex/crpm4oeaq6p23r9120eb/nginx:1.0.0
+        name: test-app
+        ports:
+        - containerPort: 80
+
