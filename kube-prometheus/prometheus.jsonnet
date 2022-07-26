@@ -12,7 +12,7 @@ local kp =
           sections+: {
              # grafana access URL
              server+: {
-               root_url: 'https://158.160.2.92/',
+               root_url: 'https://51.250.8.226/',
              },
              # default dashboard
              dashboards+: {

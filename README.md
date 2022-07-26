@@ -22,6 +22,15 @@ mkdir kube-prometheus; cd my-kube-prometheus
 <br>kubectl apply --server-side -f manifests/setup
 <br>kubectl apply -f manifests/
 <br>kubectl get pods -n monitoring
-<br>Интерфейс grafana открывается по адресу балансировщика 158.160.2.92
-<br>kubectl apply -f ../test-app/
+<br>Интерфейс grafana открывается по адресу балансировщика http://51.250.110.148/
+<br><br>kubectl apply -f ../test-app/
+<br>kubectl create secret generic n-yandex-cloud --from-file=.dockerconfigjson=/home/nataliya/.docker/config.json --type=kubernetes.io/dockerconfigjson --namespace=applications
 <br>kubectl get pods -n applications
+<br>Интерфейс test-app открывается по адресу балансировщика http://62.84.126.26/
+<br><br>helm repo add runatlantis https://runatlantis.github.io/helm-charts
+<br>helm install atlantis runatlantis/atlantis -f values.yaml
+<br>echo -n "***" > token
+<br>echo -n "***" > webhook-secret
+<br>kubectl create secret generic atlantis-vcs --from-file=token --from-file=webhook-secret --namespace=atlantis
+<br>kubectl apply -f k8s/
+

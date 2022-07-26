@@ -15,8 +15,8 @@ stringData:
     [date_formats]
     default_timezone = UTC
     [security]
-    admin_password = netology
+    admin_password = ***
     admin_user = netology
     [server]
-    root_url = https://158.160.2.92/
+    root_url = https://51.250.8.226/
 type: Opaque

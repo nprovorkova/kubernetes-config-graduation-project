@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atlantis
+  namespace: atlantis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atlantis
+  template:
+    metadata:
+      labels:
+        app: atlantis
+    spec:
+      containers:
+      - image: ghcr.io/runatlantis/atlantis:v0.19.7
+        name: atlantis
+        env:
+          - name: ATLANTIS_GH_USER
+            value: nprovorkova
+          - name: ATLANTIS_REPO_ALLOWLIST
+            value: github.com/nprovorkova/terraform-netology-graduation-project
+          - name: ATLANTIS_GH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: atlantis-vcs
+                key: token
+          - name: ATLANTIS_GH_WEBHOOK_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: atlantis-vcs
+                key: webhook-secret
+
