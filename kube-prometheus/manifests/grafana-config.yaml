@@ -18,5 +18,5 @@ stringData:
     admin_password = ***
     admin_user = netology
     [server]
-    root_url = https://51.250.8.226/
+    root_url = https://51.250.2.169/
 type: Opaque

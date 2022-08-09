@@ -22,10 +22,10 @@ mkdir kube-prometheus; cd my-kube-prometheus
 <br>kubectl apply --server-side -f manifests/setup
 <br>kubectl apply -f manifests/
 <br>kubectl get pods -n monitoring
-<br>Интерфейс grafana открывается по адресу балансировщика http://51.250.110.148/
+<br>Интерфейс grafana открывается по адресу балансировщика http://51.250.47.38/
 <br><br>kubectl apply -f ../test-app/
 <br>kubectl create secret generic n-yandex-cloud --from-file=.dockerconfigjson=/home/nataliya/.docker/config.json --type=kubernetes.io/dockerconfigjson --namespace=applications
 <br>kubectl get pods -n applications
-<br>Интерфейс test-app открывается по адресу балансировщика http://62.84.126.26/
+<br>Интерфейс test-app открывается по адресу балансировщика http://51.250.2.23/
 
 

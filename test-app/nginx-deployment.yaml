@@ -15,7 +15,7 @@ spec:
         app: test-app
     spec:
       containers:
-      - image: cr.yandex/crp80kpjudk4sdo2vipl/nginx:1.0.0
+      - image: cr.yandex/crpbagkai0gjear9v07k/nginx:1.0.0
         name: test-app
         ports:
         - containerPort: 80
