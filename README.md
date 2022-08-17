@@ -27,5 +27,6 @@ mkdir kube-prometheus; cd my-kube-prometheus
 <br>kubectl create secret generic n-yandex-cloud --from-file=.dockerconfigjson=/home/nataliya/.docker/config.json --type=kubernetes.io/dockerconfigjson --namespace=applications
 <br>kubectl get pods -n applications
 <br>Интерфейс test-app открывается по адресу балансировщика http://51.250.2.23/
+<br><br>Вы создаёте по отдельному балансировщику на каждый сервис (grafana и тестовое приложение), но можно сэкономить ресурсы, создать только один балансировщик и использовать в kubernetes Ingress на основе nginx. Так чаще всего и строятся реальные системы.
 
 
